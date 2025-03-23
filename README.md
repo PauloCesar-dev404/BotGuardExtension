@@ -29,7 +29,7 @@ Antes de utilizar a extensão, é necessário iniciar o servidor WebSocket em se
 ### instalação do módulo
 
 ```cmd
-pip install https://github.com/PauloCesar-dev404/BotGuardExtension/dist/botguardextension-1.0.0.0-py3-none-any.whl
+pip install https://raw.githubusercontent.com/PauloCesar-dev404/BotGuardExtension/refs/heads/main/dist/botguardextension-1.0.0.0-py3-none-any.whl
 ```
 
 
