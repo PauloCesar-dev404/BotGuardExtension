@@ -1,22 +1,15 @@
-<h1 style="text-align: center;">
-  BotGuardExtension
-</h1>
+# BotGuardExtension
 
-<p style="text-align: center;">
-  <img src="https://img.shields.io/badge/version-1.0.0.2-orange" alt="Versão" />
-  <img src="https://img.shields.io/badge/license-MIT-orange" alt="Licença" />
-  <a href="https://paulocesar-dev404.github.io/me-apoiando-online/">
-    <img src="https://img.shields.io/badge/💲Donate-yellow" alt="Sponsor" />
-  </a>
-</p>
+![Versão](https://img.shields.io/badge/version-1.0.0.2-orange)
+![Licença](https://img.shields.io/badge/license-MIT-orange)
+[![Sponsor](https://img.shields.io/badge/💲Donate-yellow)](https://paulocesar-dev404.github.io/me-apoiando-online/)
 
----
 
-## Descrição
 
-BotGuardExtension é uma biblioteca que facilita a obtenção de atestações do **BotGuard** via WebSockets. Ela permite integrar seu navegador com a API do BotGuard, tornando a comunicação com o servidor mais eficiente e direta.
 
-### Funcionalidades:
+é uma biblioteca que facilita a obtenção de atestações do **BotGuard** via WebSockets. Ela permite integrar seu navegador com a API do BotGuard, tornando a comunicação com o servidor mais eficiente e direta.
+
+### Funcionalidades
 
 - ✅ **PoToken**  
 - ✅ **BotGuardResponse**  
@@ -25,30 +18,37 @@ BotGuardExtension é uma biblioteca que facilita a obtenção de atestações do
 
 ## Iniciando
 
-Antes de utilizar a extensão, é necessário iniciar o servidor WebSocket em seu ambiente virtual. Para isso, siga as instruções abaixo:
-### instalação do módulo
+Antes de utilizar a extensão, é necessário iniciar o servidor WebSocket em seu ambiente virtual. Siga as instruções abaixo para configurar corretamente o ambiente.
 
-- [versões](releases/)
+### Instalação do Módulo
 
+1. Acesse a [última versão disponível](https://github.com/PauloCesar-dev404/BotGuardExtension/releases/tag/latest).
+2. Após baixar o arquivo `.whl` para o seu diretório local, instale-o via **pip**:
 
+```bash
+pip install "CAMINHO DO .whl BAIXADO"
+```
 
+---
 
-### 1. Inicie o servidor WebSocket
+## Como Usar
+
+### 1. Iniciar o Servidor WebSocket
 
 No seu ambiente virtual, execute o seguinte comando para iniciar o servidor WebSocket:
 
-```commandline
+```bash
 BG_Ws
 ```
 
-Esse comando irá iniciar o servidor em seu ambiente local. Agora, você pode criar seu cliente Python e conectar a extensão!
-
-Ou, se preferir, pode criar um script para o servidor:
+Isso iniciará o servidor WebSocket em seu ambiente local. Agora, você pode criar seu cliente Python para conectar à extensão.
 
 ### 2. Criando o Cliente Python
 
+Aqui está um exemplo simples de como criar um cliente Python para se conectar ao servidor WebSocket:
+
 ```python
-# websocket
+# Importando a biblioteca do WebSocket
 from BotGuardExtension import BotGuardWs
 
 ws = BotGuardWs()
@@ -63,17 +63,17 @@ except Exception as e:
 
 ## Extensão para o Navegador
 
-Após baixar e descompactar o repositório, siga as instruções abaixo para configurar a extensão no seu navegador.
+Após baixar e descompactar o repositório, siga os passos abaixo para configurar a extensão no seu navegador.
 
 ### 1. Carregar a Extensão no Navegador
 
-#### Para Microsoft Edge:
+#### Microsoft Edge:
 
 1. Acesse a página de extensões: `edge://extensions/`.
 2. Ative a opção "Modo de desenvolvedor" no canto inferior esquerdo.
-3. Clique em "Carregar sem compactação" e selecione a pasta `BotGuardBrowser` que foi extraída do repositório.
+3. Clique em "Carregar sem compactação" e selecione a pasta `BotGuardBrowser` extraída do repositório.
 
-#### Para Google Chrome:
+#### Google Chrome:
 
 1. Acesse a página de extensões: `chrome://extensions/`.
 2. Ative a opção "Modo de desenvolvedor" no canto superior direito.
@@ -83,17 +83,21 @@ Após baixar e descompactar o repositório, siga as instruções abaixo para con
 
 ### 2. Iniciando o Cliente no Navegador
 
-Após carregar a extensão, vá até o YouTube ou qualquer página que você deseja testar. Clique no ícone da extensão, e ela criará um favorito que será o iniciador do seu cliente **Browser**. Este favorito permitirá que você se conecte à API local do servidor WebSocket no seu ambiente.
+Após carregar a extensão, vá até o YouTube ou qualquer página onde você deseja testar a extensão. Clique no ícone da extensão e ela criará um favorito que será o iniciador do seu cliente **Browser**. Esse favorito permitirá que você se conecte à API local do servidor WebSocket no seu ambiente.
 
 ![Favorito criado](assests/icon_fixed.png)
 
 ### 3. Como Usar
 
-Agora, toda vez que você desejar iniciar o cliente, basta clicar no favorito criado. Isso torna o processo simples e rápido!
+Agora, sempre que você quiser iniciar o cliente, basta clicar no favorito criado. Isso torna o processo simples e rápido!
 
 ---
 
 ## Considerações Finais
 
-BotGuardExtension oferece uma maneira prática e eficiente de se comunicar com o servidor WebSocket local e integrar com a extensão do navegador. Basta seguir os passos simples para configurar e começar a usar.
+**BotGuardExtension** oferece uma maneira prática e eficiente de se comunicar com o servidor WebSocket local e integrar com a extensão do navegador. Siga os passos simples para configurar e começar a usar.
 
+
+### Links Importantes:
+- [Última Release](https://github.com/PauloCesar-dev404/BotGuardExtension/releases/tag/latest)
+- [Apoie o projeto](https://paulocesar-dev404.github.io/me-apoiando-online/)
