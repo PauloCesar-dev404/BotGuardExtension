@@ -1,0 +1,17 @@
+[
+    {
+      "id": 3,
+      "priority": 1,
+      "action": {
+        "type": "modifyHeaders",
+        "responseHeaders": [
+          { "header": "content-security-policy", "operation": "remove" }
+        ]
+      },
+      "condition": {
+        "urlFilter":"https://www.youtubekids.com/*",
+        "resourceTypes": ["main_frame"]
+      }
+    }
+  ]
+  

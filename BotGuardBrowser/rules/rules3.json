@@ -1,0 +1,17 @@
+[
+    {
+      "id": 4,
+      "priority": 1,
+      "action": {
+        "type": "modifyHeaders",
+        "responseHeaders": [
+          { "header": "content-security-policy", "operation": "remove" }
+        ]
+      },
+      "condition": {
+        "urlFilter":"https://studio.youtube.com*",
+        "resourceTypes": ["main_frame"]
+      }
+    }
+  ]
+  

@@ -1,0 +1,55 @@
+{
+  "manifest_version": 3,
+  "name": "BotGuardBrowser",
+  "version": "1.0.0.0",
+  "description":"execute o BotGuard",
+  "permissions": [
+     "bookmarks",
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess"
+  ],
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+  "host_permissions": [
+    "*://*.youtubekids.com/*",
+    "*://*.youtube.com/*"
+      ],
+  "action":{},
+"icons": {
+    "16": "icons/16x16.png",
+    "48":"icons/48x48.png",
+    "64": "icons/64x64.png",
+    "128": "icons/128x128.png",
+    "512":"icons/512x512.png"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "csp_remove0",
+        "enabled": true,
+        "path": "rules/rules0.json",
+        "urlFilter": "https://www.youtube.com/*"
+      },
+      {
+        "id": "csp_remove1",
+        "enabled": true,
+        "path": "rules/rules1.json",
+        "urlFilter": "https://music.youtube.com/*"
+      },
+      {
+        "id": "csp_remove2",
+        "enabled": true,
+        "path": "rules/rules2.json",
+        "urlFilter": "https://www.youtubekids.com/*"
+      },
+      {
+        "id": "csp_remove3",
+        "enabled": true,
+        "path": "rules/rules3.json",
+        "urlFilter": "https://studio.youtube.com/*"
+      }
+    ]
+  },
+  "homepage_url": "https://github.com/PauloCesar-dev404/BotGuardExtension"
+}
