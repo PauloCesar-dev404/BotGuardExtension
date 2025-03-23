@@ -28,9 +28,8 @@ BotGuardExtension é uma biblioteca que facilita a obtenção de atestações do
 Antes de utilizar a extensão, é necessário iniciar o servidor WebSocket em seu ambiente virtual. Para isso, siga as instruções abaixo:
 ### instalação do módulo
 
-```cmd
-pip install https://raw.githubusercontent.com/PauloCesar-dev404/BotGuardExtension/refs/heads/main/dist/botguardextension-1.0.0.0-py3-none-any.whl
-```
+- [versões](releases/)
+
 
 
 
