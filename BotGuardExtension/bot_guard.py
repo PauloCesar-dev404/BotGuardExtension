@@ -7,16 +7,16 @@ class BotGuardClient:
     Cliente para utilizar o BotGuard, permitindo obter respostas a partir de um bytecode.
     """
 
-    def __init__(self):
+    def __init__(self,timeout:int=5):
         """
         Inicializa o BotGuardClient.
 
         Args:
-            saved (bool, optional): Parâmetro opcional indicando se há dados salvos (cache ou estado).
+            timeout (int, optional): Tempo de espera da resposta.Padrão é 5s
         """
+        self.__timeout = timeout
 
-
-    def get_bot_guard_reponse(self, program: str, identifier: str =None) -> dict:
+    def get_bot_guard_reponse(self, program: str, identifier: str = '') -> dict:
         """
         Obtém a resposta do BotGuard a partir de um bytecode.
 
@@ -31,15 +31,19 @@ class BotGuardClient:
             InvalidByteCode: Se o bytecode estiver inválido ou expirado.
             Exception: Se a resposta contiver um erro.
         """
-        client = WsClient(bytecode=program, identifier=identifier)
+        client = WsClient(bytecode=program,
+                          identifier=identifier,
+                          timeout=self.__timeout)
         client.start()
         response = client.get_message()
         if program == response or not program:
             raise InvalidByteCode('O bytecode está inválido ou expirado!')
-        if 'error' in response:
-            raise Exception(response)
+        if program in response.get('bot_guard_response',''):
+            raise InvalidByteCode(
+                'O bytecode está inválido ou expirado!'
+            )
+        if response.get('error',''):
+            raise WsClientError(response.get('error'))
         return response
 
-    @staticmethod
-    def __send_request(headers: dict, endpoint: str, payload: list = None):
-        return requests.post(url=endpoint, json=payload, headers=headers)
+

@@ -110,9 +110,9 @@ const bookmarklet = `javascript:(function() {
           if (socket && socket.readyState === WebSocket.OPEN) {
               const jsonMessage = JSON.stringify({
                   bot_guard_response: "....",
-                  args: "send_extension",
-                  client_id: "browser",
-                  destin: "APP",
+                  args: "send_app",
+                  client_id: "extension",
+                  destin: "pythonClient",
               });
               socket.send(jsonMessage);
           } else {
@@ -216,9 +216,9 @@ const bookmarklet = `javascript:(function() {
                       socket.send(JSON.stringify({
                           bot_guard_response: botguardResponse,
                           poToken: poToken,
-                          args: "send_extension",
-                          client_id: "browser",
-                          destin: "APP",
+                          args: "send_app",
+                          client_id: "extension",
+                          destin: "pythonClient",
                       }));
                   }
               }, 500);

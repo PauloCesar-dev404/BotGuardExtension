@@ -3,7 +3,7 @@
 </h1>
 
 <p style="text-align: center;">
-  <img src="https://img.shields.io/badge/version-1.0.0.0-orange" alt="Versão" />
+  <img src="https://img.shields.io/badge/version-1.0.0.2-orange" alt="Versão" />
   <img src="https://img.shields.io/badge/license-MIT-orange" alt="Licença" />
   <a href="https://paulocesar-dev404.github.io/me-apoiando-online/">
     <img src="https://img.shields.io/badge/💲Donate-yellow" alt="Sponsor" />
