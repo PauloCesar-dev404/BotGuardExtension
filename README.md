@@ -83,7 +83,7 @@ Após baixar e descompactar o repositório, siga os passos abaixo para configura
 
 ### 2. Iniciando o Cliente no Navegador
 
-Após carregar a extensão, vá até o YouTube ou qualquer página onde você deseja testar a extensão. Clique no ícone da extensão e ela criará um favorito que será o iniciador do seu cliente **Browser**. Esse favorito permitirá que você se conecte à API local do servidor WebSocket no seu ambiente.
+Após carregar a extensão, vá até o YouTube. Clique no ícone da extensão e ela criará um favorito que será o iniciador do seu cliente **Browser**. Esse favorito permitirá que você se conecte à API local do servidor WebSocket no seu ambiente.
 
 ![Favorito criado](assests/icon_fixed.png)
 
