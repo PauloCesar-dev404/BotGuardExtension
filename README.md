@@ -45,18 +45,16 @@ Isso iniciará o servidor WebSocket em seu ambiente local. Agora, você pode cri
 
 ### 2. Criando o Cliente Python
 
-Aqui está um exemplo simples de como criar um cliente Python para se conectar ao servidor WebSocket:
+Aqui está um exemplo simples de como obter um PoToken 
+
 
 ```python
-# Importando a biblioteca do WebSocket
-from BotGuardExtension import BotGuardWs
-
-ws = BotGuardWs()
-
-try:
-    ws.start()  # Inicia o servidor WebSocket
-except Exception as e:
-    print(f"ERROR: {e}")
+from BotGuardExtension import BotGuardClient
+bg_client = BotGuardClient()
+program_byrecode = ''
+video_id = ''
+po_token = bg_client.get_bot_guard_reponse(program=program_byrecode,identifier=video_id)
+print(po_token.get('po_token'))
 ```
 
 ---
